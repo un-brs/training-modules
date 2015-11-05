@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="TmApp">
   <head>
     <meta charset="utf-8">
     <title>E-modules design</title>
@@ -8,178 +8,25 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.css"/>
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick-theme.min.css"/>
+    <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2014.1.318/styles/kendo.common.min.css" />
+    <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2014.1.318/styles/kendo.blueopal.min.css" />
     <link rel="stylesheet" href="main.css"/>
 
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.hoverintent/1.8.1/jquery.hoverIntent.min.js"></script>
-    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.js"></script>
+    <script src="http://kendo.cdn.telerik.com/2014.1.318/js/kendo.all.min.js"></script>
   </head>
   <body>
     <div class="page">
       <div class="content">
         <img src="img/TM-logo.png" alt="" width="196" height="39">
       </div>
-      <img class="logo" src="img/header.png" alt="">
-      <div class="content content--slick">
-        <div class="slick">
-          <div class="slick__item">
-            <div class="slick__subitem">
-              Overview
-            </div>
-            <div class="slick__subitem">
-              Pops
-            </div>
-          </div>
-          <div class="slick__item">
-            <div class="slick__subitem">
-              Reporting and other notifications
-            </div>
-            <div class="slick__subitem">
-              Chemicals
-            </div>
-          </div>
-          <div class="slick__item">
-            <div class="slick__subitem">
-              Wastes
-            </div>
-            <div class="slick__subitem">
-              National plans and strategies
-            </div>
-          </div>
-          <div class="slick__item">
-            <div class="slick__subitem">
-              test7
-            </div>
-            <div class="slick__subitem">
-              test8
-            </div>
-          </div>
-        </div>
-      </div>
-      <hr/>
-      <div class="topic-list">
-        <div class="topic-list__item">Overview</div>
-        <div class="topic-list__item topic-list__item--active">Reporting and other notifications</div>
-        <div class="topic-info">
-          <div class="row">
-              <div class="col-md-6">
-                <div class="topic-info__abstract">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, consequatur id temporibus qui omnis quo autem quaerat ex, at aut pariatur fuga blanditiis explicabo sint aliquam consequuntur debitis enim veritatis!
-                </div>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati culpa quos soluta, quaerat animi dolor porro cum saepe cumque eligendi illum aliquid eveniet, quisquam harum, doloribus laborum provident eaque dolorum.
-                </p>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic debitis, tempora perspiciatis in, velit impedit dicta sunt magnam aliquam deleniti id labore excepturi expedita libero provident eligendi pariatur dolorem consequatur.
-                </p>
-                <div class="topic-info__start">
-                  <a href="#">Start course →</a>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <img class="topic-info__img" src="img/overview_small.png" alt="" width="348" height="120">
-                <div class="topic-info__courses">
-                  <ul class="topic-info__courses-list">
-                    <li>Lorem ipsum dolor sit amet.</li>
-                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
-                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, odio.</li>
-                    <li>Lorem ipsum.</li>
-                  </ul>
-                </div>
-              </div>
-          </div>
-        </div>
-        <hr/>
-        <!-- BEGIN topic-courses  -->
-        <div class="topic-courses">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="courses-list">
-                <div class="courses-list__item">
-                  <div class="row">
-                    <div class="col-md-2">
-                      <img src="http://placehold.it/50x50" alt="">
-                    </div>
-                    <div class="col-md-10">
-                        <div class="course-list__title">Lorem ipsum dolor.</div>
-                        <div class="course-list__abstract">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, earum!</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="courses-list__item courses-list__item--active">
-                  <div class="row">
-                    <div class="col-md-2">
-                      <img src="http://placehold.it/50x50" alt="">
-                    </div>
-                    <div class="col-md-10">
-                        <div class="course-list__title">Lorem ipsum dolor.</div>
-                        <div class="course-list__abstract">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, earum!</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="courses-list__item">
-                  <div class="row">
-                    <div class="col-md-2">
-                      <img src="http://placehold.it/50x50" alt="">
-                    </div>
-                    <div class="col-md-10">
-                        <div class="course-list__title">Lorem ipsum dolor.</div>
-                        <div class="course-list__abstract">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, earum!</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="course-content" style="padding: 5px">
-                <div class="course-content__media"  style="text-align: center">
-                  <iframe align="center" id="iframe_container" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" width="300" height="200" src="//prezi.com/embed/idajoepohctg/?bgcolor=ffffff&amp;lock_to_path=0&amp;autoplay=0&amp;autohide_ctrls=0&amp;landing_data=bHVZZmNaNDBIWkRDVE93YVVDTVN5dWF2eDNlZVpKYUwwUkhXZHkybnZqRFMzNXlvcEZSdTNQeXNIMWh5aGJGejc5L0orRFU9&amp;landing_sign=GXwKwp5AR2sG_KdItRAsUCldK65nmiXUNuSuWW0FiS0"></iframe>
-                </div>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, assumenda, animi excepturi officiis, laborum eos aspernatur eveniet nisi, minima soluta qui facilis! Reprehenderit labore itaque eveniet, veniam, laborum excepturi modi necessitatibus corporis debitis ut aliquid quidem accusantium architecto ducimus ipsa. Illo similique nostrum cum sunt dolore dolorem voluptate, ullam culpa.
-                <ul class="course-content__actions">
-                  <li class="course-content__action"><a href="#"><img src="img/actions/a_Ress_01.png" alt=""></a></li>
-                  <li class="course-content__action"><a href="#"><img src="img/actions/a_Ress_02.png" alt=""></a></li>
-                  <li class="course-content__action"><a href="#"><img src="img/actions/a_Ress_03.png" alt=""></a></li>
-                  <li class="course-content__action"><a href="#"><img src="img/actions/a_Ress_04.png" alt=""></a></li>
-                  <li class="course-content__action"><a href="#"><img src="img/actions/a_Ress_05.png" alt=""></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- END topic-courses  -->
-        <hr/>
-        <div class="topic-docs">
-          <h2>Documents</h2>
-          <table class="topic-docs__list">
-            <tr>
-              <td>01.01.2016</td>
-              <td>Lorem ipsum dolor sit amet, consectetur adipisicing.</td>
-              <td><a href="#"><i class="fa fa-file-word-o"></i></a> <a href="#"><i class="fa fa-file-pdf-o"></i></a> <a href="#"><i class="fa fa-external-link"></i></a></td>
-            </tr>
-            <tr>
-              <td>01.01.2016</td>
-              <td>Lorem ipsum dolor sit amet, consectetur adipisicing.</td>
-              <td><a href="#"><i class="fa fa-file-word-o"></i></a> <a href="#"><i class="fa fa-file-pdf-o"></i></a></td>
-            </tr>
-            <tr>
-              <td>01.01.2016</td>
-              <td>Lorem ipsum dolor sit amet, consectetur adipisicing.</td>
-              <td><a href="#"><i class="fa fa-file-word-o"></i></a> <a href="#"><i class="fa fa-file-pdf-o"></i></a></td>
-            </tr>
-          </table>
-          <div class="topic-docs__back">
-             <a href="#">← Back to course</a>
-          </div>
-        </div>
-      </div>
-      <hr/>
-      <div class="topic-list__item topic-list__item--afteractive">Wastes</div>
-      <div class="topic-list__item">POPs</div>
-      <div class="topic-list__item">Chemicals</div>
-      <div class="topic-list__item">National plans and strategies</div>
+      <ui-view/>
     </div>
-<script src="app.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+  <script src="app.js"></script>
   </body>
 </html>

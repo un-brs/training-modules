@@ -1,0 +1,6 @@
+<div class="topic-list">
+  <div  ng-repeat="topic in vm.topics track by topic.id">
+    <div class="topic-list__item" ng-click="vm.go(topic.id)" ng-class="{'topic-list__item--active': topic.id == vm.selectedId, 'topic-list__item--afteractive': topic.id == vm.afterSelectedId }">{{topic.title}}</div>
+    <div ui-view ng-if="topic.id == vm.selectedId"></div>
+  </div>
+</div>

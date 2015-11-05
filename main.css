@@ -11,6 +11,12 @@ body {
 
 .page a {
   text-decoration: none;
+  color: black;
+}
+
+.page a:hover {
+  text-decoration: underline;
+
 }
 
 .content {
@@ -83,6 +89,7 @@ body {
     margin-top: 30px;
     margin-left: 5px;
     margin-right: 5px;
+    cursor: pointer;
 }
 
 
@@ -98,6 +105,10 @@ body {
   padding: 10px 5px 1px 5px;
   color: silver;
   font-family: 'Questrial', sans-serif;
+}
+
+.topic-list__item:hover {
+  cursor: pointer;
 }
 
 .topic-list__item--active {
@@ -142,11 +153,27 @@ body {
 
 .topic-info__courses-list {
   font-weight: bold;
-  padding-left: 1em;
+  padding-left: 2em;
 }
+
+ .course-content__related {
+   font-weight: bold;
+   padding-left: 2em;
+   margin-top: 10px;
+ }
+
+ .course-content__related{
+   font-weight: bold;
+   padding-left: 2em;
+   margin-top: 10px;
+ }
 
 .course-list__title {
   font-weight: bold;
+}
+
+.courses-list__item {
+  cursor: pointer;
 }
 
 .courses-list__item--active {
@@ -155,8 +182,6 @@ body {
 }
 
 .course-content {
-  background: rgb(153, 153, 153);
-  background: rgb();
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
@@ -217,4 +242,13 @@ body {
 
 .topic-docs__back a:hover {
   color: silver;
+}
+
+.row--table {
+  display: table;
+}
+
+.row--table .col-md-6{
+  display: table-cell;
+  width: 50%;
 }

@@ -1,0 +1,36 @@
+<!-- BEGIN topic-courses  -->
+<div class="topic-courses">
+  <table>
+    <tr>
+      <td style="width:50%">
+        <table>
+            <tr class="courses-list__item" ng-class="{'courses-list__item--active': course.id == vm.selected}" ng-click="vm.go(course.id)" ng-repeat="course in vm.courses">
+              <td style="width: 60px"><img src="http://placehold.it/50x50" alt=""></td>
+              <td>
+                <div class="course-list__title">{{course.title}}</div>
+                <div class="course-list__abstract">{{course.description}}</div>
+              </td>
+            </tr>
+        </table>
+      </td>
+      <td style="background-color: rgb(153, 153, 153)">
+        <div class="course-content" style="padding: 5px">
+          <div class="course-content__media"  style="text-align: center">
+            <iframe align="center" id="iframe_container" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" width="300" height="200" src="//prezi.com/embed/idajoepohctg/?bgcolor=ffffff&amp;lock_to_path=0&amp;autoplay=0&amp;autohide_ctrls=0&amp;landing_data=bHVZZmNaNDBIWkRDVE93YVVDTVN5dWF2eDNlZVpKYUwwUkhXZHkybnZqRFMzNXlvcEZSdTNQeXNIMWh5aGJGejc5L0orRFU9&amp;landing_sign=GXwKwp5AR2sG_KdItRAsUCldK65nmiXUNuSuWW0FiS0"></iframe>
+          </div>
+          <ul class="course-content__related">
+            <li class="course-content__related-item" ng-repeat="rel in vm.related"><a ui-sref="topic.course({'topicId': rel.topicId, 'courseId': rel.id})">{{rel.title}}</a></li>
+          </ul>
+          <ul class="course-content__actions">
+            <li class="course-content__action"><a href="\\#"><img src="img/actions/a_Ress_01.png" alt=""></a></li>
+            <li class="course-content__action"><a href="\\#"><img src="img/actions/a_Ress_02.png" alt=""></a></li>
+            <li class="course-content__action"><a href="\\#"><img src="img/actions/a_Ress_03.png" alt=""></a></li>
+            <li class="course-content__action"><a href="\\#"><img src="img/actions/a_Ress_04.png" alt=""></a></li>
+            <li class="course-content__action"><a href="\\#"><img src="img/actions/a_Ress_05.png" alt=""></a></li>
+          </ul>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
+<!-- END topic-courses  -->

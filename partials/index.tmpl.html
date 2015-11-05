@@ -1,0 +1,11 @@
+<img class="logo" src="img/header.png" alt="">
+<div class="content content--slick">
+  <div class="slick">
+    <div class="slick__item" ng-repeat="pair in vm.pairs">
+      <div class="slick__subitem" ng-repeat="topic in pair" ng-click="vm.go(topic.id)">
+        {{topic.title}}
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
