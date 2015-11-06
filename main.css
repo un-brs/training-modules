@@ -15,8 +15,7 @@ body {
 }
 
 .page a:hover {
-  text-decoration: underline;
-
+  color: white;
 }
 
 .content {
@@ -174,10 +173,13 @@ body {
 
 .courses-list__item {
   cursor: pointer;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
 }
 
 .courses-list__item--active {
-  background: rgb(153, 153, 153);
+  background-color: rgb(153, 153, 153);
+  color: rgb(230, 236, 234);
   margin-right: -30px;
 }
 

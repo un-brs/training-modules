@@ -33,7 +33,37 @@ angular.module('TmApp').config(
         {
           url: '/course/:courseId',
           templateUrl: "partials/topic.course.tmpl.html",
-          controller: 'tmTopicCourceController as vm'
+          controller: 'tmTopicCourseController as vm'
+        }
+      ).state('topic.docs',
+        {
+          url: '/docs/:courseId',
+          templateUrl: "partials/topic.docs.tmpl.html",
+          controller: 'tmCourseDocsController as vm'
+        }
+      ).state('topic.cases',
+        {
+          url: '/cases/:courseId',
+          templateUrl: "partials/topic.cases.tmpl.html",
+          controller: 'tmCourseCasesController as vm'
+        }
+      ).state('topic.webinars',
+        {
+          url: '/webinars/:courseId',
+          templateUrl: "partials/topic.webinars.tmpl.html",
+          controller: 'tmCourseWebinarsController as vm'
+        }
+      ).state('topic.workshops',
+        {
+          url: '/workshops/:courseId',
+          templateUrl: "partials/topic.workshops.tmpl.html",
+          controller: 'tmCourseWorkshopsController as vm'
+        }
+      ).state('topic.quizes',
+        {
+          url: '/quizes/:courseId',
+          templateUrl: "partials/topic.quizes.tmpl.html",
+          controller: 'tmCourseQuizesController as vm'
         }
       );
   }
@@ -80,7 +110,9 @@ function TmIndexController($scope, $state, $stateParams, $timeout, tmDataService
           $(this).removeClass("slick__subitem--hover");
           $(".slick__subitem").not(this).removeClass("slick__subitem--nothover");
       };
+
       $('.slick__subitem').hoverIntent(hoverItemIn, hoverItemOut);
+
     }
   );
 
@@ -92,13 +124,18 @@ function TmIndexController($scope, $state, $stateParams, $timeout, tmDataService
 angular.module('TmApp').controller('tmTopicController', TmTopicController);
 
 angular.module('TmApp').controller('tmTopicInfoController', TmTopicInfoController);
-angular.module('TmApp').controller('tmTopicCourceController', TmTopicCourseController);
+angular.module('TmApp').controller('tmTopicCourseController', TmTopicCourseController);
+
+angular.module('TmApp').controller('tmCourseDocsController', TmCourseDocsController);
+angular.module('TmApp').controller('tmCourseCasesController', TmCourseCasesController);
+angular.module('TmApp').controller('tmCourseWebinarsController', TmCourseWebinarsController);
+angular.module('TmApp').controller('tmCourseWorkshopsController', TmCourseWorkshopsController);
+angular.module('TmApp').controller('tmCourseQuizesController', TmCourseQuizesController);
 
 function TmTopicController($state, $stateParams, tmDataService) {
   var vm = this;
 
   vm.topics = tmDataService.topics();
-  vm.topics.forEach(function(t){console.log(t);});
   vm.selectedId = $stateParams.topicId;
   for (var i = 0; i < vm.topics.length - 1; ++i) {
     if (vm.topics[i].id == vm.selectedId) {
@@ -111,8 +148,9 @@ function TmTopicController($state, $stateParams, tmDataService) {
   };
 }
 
-function TmTopicInfoController($stateParams) {
-  console.log("INFO");
+function TmTopicInfoController($stateParams, tmDataService) {
+  var vm = this;
+  vm.related = tmDataService.topics().slice(0,3);
 }
 
 function TmTopicCourseController($state, $stateParams, tmDataService) {
@@ -120,9 +158,46 @@ function TmTopicCourseController($state, $stateParams, tmDataService) {
   vm.courses = tmDataService.courses($stateParams.topicId);
   vm.selected = $stateParams.courseId ? $stateParams.courseId: vm.courses[0].id;
   vm.related = tmDataService.related(vm.selected);
+
+  var hoverActionIn = function() {
+    $(this).attr('src', $(this).attr('src').replace('a_', 'r_'));
+  };
+
+  var hoverActionOut = function() {
+    $(this).attr('src', $(this).attr('src').replace('r_', 'a_'));
+  };
+
+  $('.course-content__action img').hover(hoverActionIn, hoverActionOut);
+
+
   vm.go = function(courseId) {
     $state.go('topic.course', {'courseId': courseId});
   };
+}
+
+function TmCourseDocsController($stateParams) {
+  var vm = this;
+  vm.courseId = $stateParams.courseId;
+}
+
+function TmCourseCasesController($stateParams) {
+  var vm = this;
+  vm.courseId = $stateParams.courseId;
+}
+
+function TmCourseWebinarsController($stateParams) {
+  var vm = this;
+  vm.courseId = $stateParams.courseId;
+}
+
+function TmCourseWorkshopsController($stateParams) {
+  var vm = this;
+  vm.courseId = $stateParams.courseId;
+}
+
+function TmCourseQuizesController($stateParams) {
+  var vm = this;
+  vm.courseId = $stateParams.courseId;
 }
 
 function TmData() {
@@ -152,6 +227,18 @@ function TmData() {
       'title': 'National plans and strategies',
       'id': 6
     },
+    {
+      'title': 'Test 1',
+      'id': 7
+    },
+    {
+      'title': 'Test 2',
+      'id': 8
+    },
+    {
+      'title': 'Test 3',
+      'id': 9
+    },
   ];
 
   var courses = function(topicId) {
@@ -168,7 +255,7 @@ function TmData() {
       }
     );
     return result;
-  }
+  };
 
   var related = function(courseId) {
     var result = [];

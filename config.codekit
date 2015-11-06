@@ -196,6 +196,110 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+<<<<<<< 192bebad4d9df123b745190b28a763bf4afe9ee6
+=======
+	"\/min\/app-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/min\/app-min.js",
+		"outputAbbreviatedPath": "\/min\/min\/app-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/partials\/index.tmpl.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/partials\/index.tmpl.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/partials\/topic-info.tmpl.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/partials\/topic-info.tmpl.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+        "\/partials\/topic.cases.tmpl.html": {
+                "fileType": 8192,
+                "ignore": 0,
+                "ignoreWasSetByUser": 0,
+                "inputAbbreviatedPath": "\/partials\/topic.cases.tmpl.html",
+                "outputAbbreviatedPath": "No Output Path",
+                "outputPathIsOutsideProject": 0,
+                "outputPathIsSetByUser": 0
+                },
+	"\/partials\/topic.course.tmpl.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/partials\/topic.course.tmpl.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+        "\/partials\/topic.docs.tmpl.html": {
+                "fileType": 8192,
+                "ignore": 0,
+                "ignoreWasSetByUser": 0,
+                "inputAbbreviatedPath": "\/partials\/topic.docs.tmpl.html",
+                "outputAbbreviatedPath": "No Output Path",
+                "outputPathIsOutsideProject": 0,
+                "outputPathIsSetByUser": 0
+                },
+	"\/partials\/topic.info.tmpl.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/partials\/topic.info.tmpl.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+        "\/partials\/topic.quizes.tmpl.html": {
+                "fileType": 8192,
+                "ignore": 0,
+                "ignoreWasSetByUser": 0,
+                "inputAbbreviatedPath": "\/partials\/topic.quizes.tmpl.html",
+                "outputAbbreviatedPath": "No Output Path",
+                "outputPathIsOutsideProject": 0,
+                "outputPathIsSetByUser": 0
+                },
+	"\/partials\/topic.tmpl.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/partials\/topic.tmpl.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+        "\/partials\/topic.webinars.tmpl.html": {
+                "fileType": 8192,
+                "ignore": 0,
+                "ignoreWasSetByUser": 0,
+                "inputAbbreviatedPath": "\/partials\/topic.webinars.tmpl.html",
+                "outputAbbreviatedPath": "No Output Path",
+                "outputPathIsOutsideProject": 0,
+                "outputPathIsSetByUser": 0
+                },
+        "\/partials\/topic.workshops.tmpl.html": {
+                "fileType": 8192,
+                "ignore": 0,
+                "ignoreWasSetByUser": 0,
+                "inputAbbreviatedPath": "\/partials\/topic.workshops.tmpl.html",
+                "outputAbbreviatedPath": "No Output Path",
+                "outputPathIsOutsideProject": 0,
+                "outputPathIsSetByUser": 0
+                },
+>>>>>>> Working prototype
 	"\/README.md": {
 		"criticStyle": 0,
 		"enableFootnotes": 1,
@@ -216,6 +320,15 @@
 		"processHTML": 0,
 		"randomFootnoteNumbers": 0,
 		"useCompatibilityMode": 0
+                },
+        "\/tmpl\/index.tmpl.html": {
+                "fileType": 8192,
+                "ignore": 0,
+                "ignoreWasSetByUser": 0,
+                "inputAbbreviatedPath": "\/tmpl\/index.tmpl.html",
+                "outputAbbreviatedPath": "No Output Path",
+                "outputPathIsOutsideProject": 0,
+                "outputPathIsSetByUser": 0
 		}
 	},
 "hooks": [

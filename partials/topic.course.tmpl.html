@@ -22,11 +22,11 @@
             <li class="course-content__related-item" ng-repeat="rel in vm.related"><a ui-sref="topic.course({'topicId': rel.topicId, 'courseId': rel.id})">{{rel.title}}</a></li>
           </ul>
           <ul class="course-content__actions">
-            <li class="course-content__action"><a href="\\#"><img src="img/actions/a_Ress_01.png" alt=""></a></li>
-            <li class="course-content__action"><a href="\\#"><img src="img/actions/a_Ress_02.png" alt=""></a></li>
-            <li class="course-content__action"><a href="\\#"><img src="img/actions/a_Ress_03.png" alt=""></a></li>
-            <li class="course-content__action"><a href="\\#"><img src="img/actions/a_Ress_04.png" alt=""></a></li>
-            <li class="course-content__action"><a href="\\#"><img src="img/actions/a_Ress_05.png" alt=""></a></li>
+            <li class="course-content__action"><a ui-sref="^.docs({courseId: vm.selected})" title="Documents"><img src="img/actions/a_Ress_01.png" alt="Documents"></a></li>
+            <li class="course-content__action"><a ui-sref="^.cases(vm.selected)" title="Use Cases"><img src="img/actions/a_Ress_02.png" alt="Use Cases"></a></li>
+            <li class="course-content__action"><a ui-sref="^.webinars(vm.selected)" title="Webinars"><img src="img/actions/a_Ress_03.png" alt="Webinars"></a></li>
+            <li class="course-content__action"><a ui-sref="^.workshops(vm.selected)" title="Workshops"><img src="img/actions/a_Ress_04.png" alt="Workshops"></a></li>
+            <li class="course-content__action"><a ui-sref="^.quizes(vm.selected)" title="Quizes"><img src="img/actions/a_Ress_05.png" alt="Quizes"></a></li>
           </ul>
         </div>
       </td>

@@ -19,10 +19,7 @@
         <img class="topic-info__img" src="img/overview_small.png" alt="" width="348" height="120">
         <div class="topic-info__courses">
           <ul class="topic-info__courses-list">
-            <li>Lorem ipsum dolor sit amet.</li>
-            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
-            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, odio.</li>
-            <li>Lorem ipsum.</li>
+            <li ng-repeat="topic in vm.related"><a ui-sref="topic.info({topicId: topic.id})">{{topic.title}}</a></li>
           </ul>
         </div>
       </div>
