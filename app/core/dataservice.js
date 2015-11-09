@@ -35,7 +35,7 @@
         'title': 'National plans and strategies',
         'id': 6
       }, {
-        'title': 'Test 1',
+        'title': 'Test JH',
         'id': 7
       }, {
         'title': 'Test 2',
