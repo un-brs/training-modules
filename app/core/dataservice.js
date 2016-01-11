@@ -63,6 +63,7 @@
               'title': 'Course ' + item,
               'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur laoreet tempus nisi. Sed ullamcorper mauris eget venenatis tempor.'
             });
+          }
         }
       );
       return result;
