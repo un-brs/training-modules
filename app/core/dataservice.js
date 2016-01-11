@@ -84,6 +84,28 @@
       return result;
     }
 
+    function webinars(courseId) {
+      var result = [];
+      result.push({
+        'id': 1,
+        'title': 'Technical Guidelines on Transboundary Movements of E-waste',
+        'date': '10/11/2015',
+        'lnk': 'http://www.basel.int/Default.aspx?tabid=4210&meetId=BC23947F-447E-E511-BFED-005056937F29&lang=en'
+      });
+      return result;
+    }
+
+    function workshops(courseId) {
+      var result = [];
+      result.push({
+        'id': 1,
+        'title': 'Regional workshop on enhancing capacities for the environmentally sound management of waste electrical and electronic equipment (e-waste) through the regional delivery in Africa',
+        'date': '20/10/2015',
+        'lnk': 'http://www.basel.int/Default.aspx?tabid=4619'
+      });
+      return result;
+    }
+
     function related(courseId) {
       var result = [];
       angular.forEach([1,2,3,4,5],
