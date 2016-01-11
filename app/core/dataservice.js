@@ -23,7 +23,7 @@
         'title': 'Reporting and other notifications',
         'id': 2
       }, {
-        'title': 'Wastes',
+        'title': 'E-Wastes',
         'id': 3
       }, {
         'title': 'POPs',
