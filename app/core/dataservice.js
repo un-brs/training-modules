@@ -12,7 +12,10 @@
     return {
       'topics': topics,
       'courses': courses,
-      'related': related
+      'related': related,
+      'docs': docs,
+      'webinars': webinars,
+      'workshops': workshops
     };
 
     function topics() {
@@ -66,6 +69,16 @@
           }
         }
       );
+      return result;
+    }
+
+    function docs(courseId) {
+      var result = [];
+      result.push({
+        'id': 1,
+        'title': 'test title doc',
+        'description': 'test desc doc.'
+      });
       return result;
     }
 
