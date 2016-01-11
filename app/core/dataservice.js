@@ -77,7 +77,9 @@
       result.push({
         'id': 1,
         'title': 'test title doc',
-        'description': 'test desc doc.'
+        'date': '27/11/2015',
+        'lnkWord': 'http://chm.pops.int/portals/4/download.aspx?d=UNEP-POPS-COP.7-SC-7-16.English.docx',
+        'lnkPdf': 'http://chm.pops.int/portals/4/download.aspx?d=UNEP-POPS-COP.7-SC-7-16.English.pdf'
       });
       return result;
     }
