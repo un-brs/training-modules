@@ -9,6 +9,7 @@
 
     function DocsController($stateParams) {
       var vm = this;
+      vm.docs = dataservice.docs();
       vm.courseId = $stateParams.courseId;
     }
 })();
