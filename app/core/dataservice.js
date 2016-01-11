@@ -50,11 +50,11 @@
       var result = [];
       angular.forEach([1, 2, 3, 4, 5],
         function(item) {
-          if (topicId == 3) {
+          if (topicId == 3 && item == 1) {
             result.push({
               'id': item,
               'title': 'Course ' + item + ' - E-waste',
-              'description': 'The training module is to be used to train officials in Parties that are involved in activities that are related to E-wastes and the different elements needed to understand their situation and address the implementation of the Basel and Stockholm Conventions.'
+              'description': 'The training module is to be used to train officials in Parties that are involved in activities related to E-wastes.'
             });
           }
           else {
