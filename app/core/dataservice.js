@@ -53,7 +53,7 @@
           if (topicId == 3) {
             result.push({
               'id': item,
-              'title': 'Course ' + item + ' E-waste',
+              'title': 'Course ' + item + ' - E-waste',
               'description': 'The training module is to be used to train officials in Parties that are involved in activities that are related to E-wastes and the different elements needed to understand their situation and address the implementation of the Basel and Stockholm Conventions.'
             });
           }
