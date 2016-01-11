@@ -5,9 +5,14 @@
     .module('TmApp')
     .factory('dataservice', dataservice);
 
-  dataservice.$inject = [];
+  dataservice.$inject = ['Restangular'];
 
-  function dataservice() {
+  function dataservice(Restangular) {
+
+    Restangular.setBaseUrl('http://informea.pops.int/e-learning/ElearningService.svc');
+    Restangular.setDefaultRequestParams('get', {$format: 'json', callback: 'JSON_CALLBACK'});
+
+    Restangular.setDefaultHttpFields({cache: true});
 
     return {
       'topics': topics,
@@ -19,6 +24,7 @@
     };
 
     function topics() {
+      console.log(Restangular.all('el_topic').getList());
       return [{
         'title': 'Overview',
         'id': 1
