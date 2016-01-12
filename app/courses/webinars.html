@@ -1,20 +1,10 @@
 <div class="topic-docs">
   <h2>Webinars</h2>
   <table class="topic-docs__list">
-    <tr>
-      <td>01.01.2016</td>
-      <td>Lorem ipsum dolor sit amet, consectetur adipisicing.</td>
-      <td><a href="\\#"><img border="0" src="http://chm.pops.int/desktopmodules/MFilesDocsV2/images/doc.png" /></a> <a href="\\#"><img border="0" src="http://chm.pops.int/desktopmodules/MFilesDocsV2/images/pdf.png" /></a></td>
-    </tr>
-    <tr>
-      <td>01.01.2016</td>
-      <td>Lorem ipsum dolor sit amet, consectetur adipisicing.</td>
-      <td><a href="\\#"><img border="0" src="http://chm.pops.int/desktopmodules/MFilesDocsV2/images/doc.png" /></a> <a href="\\#"><img border="0" src="http://chm.pops.int/desktopmodules/MFilesDocsV2/images/pdf.png" /></a></td>
-    </tr>
-    <tr>
-      <td>01.01.2016</td>
-      <td>Lorem ipsum dolor sit amet, consectetur adipisicing.</td>
-      <td><a href="\\#"><img border="0" src="http://chm.pops.int/desktopmodules/MFilesDocsV2/images/doc.png" /></a> <a href="\\#"><img border="0" src="http://chm.pops.int/desktopmodules/MFilesDocsV2/images/pdf.png" /></a></td>
+    <tr ng-repeat="webinar in vm.webinars">
+      <td>{{webinar.date}}</td>
+      <td>{{webinar.title}}</td>
+      <td><a href="{{webinar.lnk}}"><i class="fa fa-external-link"></i></a> </td>
     </tr>
   </table>
   <div class="topic-docs__back">

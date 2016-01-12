@@ -211,6 +211,10 @@ body {
   width: 100%;
 }
 
+.topic-docs__list .fa {
+  font-size: 150%;
+}
+
 .topic-docs h2 {
   font-family: 'Questrial', sans-serif;
   color: rgb(93,93,93);
