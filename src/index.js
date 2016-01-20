@@ -1,9 +1,3 @@
-require('angular');
-require('angular-ui-router');
-require('angular-loading-bar');
-require('angular-loading-bar/build/loading-bar.min.css');
-require('lodash-compat');
-require('restangular');
 require('./styles/main.css');
 require('./app.module.js');
 
@@ -25,6 +19,5 @@ require('./courses/workshops.controller.js')(app);
 require('./courses/quizes.controller.js')(app);
 
 if (ON_TEST) {
-  require('angular-mocks/angular-mocks');
   require('./test.js')(app);
 }
