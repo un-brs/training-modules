@@ -1,15 +1,18 @@
-(function() {
-    'use strict';
+module.exports = function(ngModule) {
+  'use strict';
 
-    angular
-        .module('TmApp')
-        .controller('DocsController', DocsController);
+  ngModule.controller('DocsController', DocsController);
 
-    DocsController.$inject = ['$stateParams', 'dataservice'];
+  DocsController.$inject = ['$stateParams', 'dataservice', 'mfilesservice'];
 
-    function DocsController($stateParams, dataservice) {
-      var vm = this;
-      vm.docs = dataservice.docs();
-      vm.courseId = $stateParams.courseId;
-    }
-})();
+  function DocsController($stateParams, dataservice, mfilesservice) {
+    var vm = this;
+    vm.lang = "en";
+    mfilesservice.documents(["E-waste"], vm.lang).then(function(result) {
+      console.log(result[0]);
+      vm.docs = result;
+    });
+    // vm.docs = dataservice.docs();
+    vm.courseId = $stateParams.courseId;
+  }
+};

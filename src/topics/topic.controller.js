@@ -1,9 +1,7 @@
-(function() {
+module.exports = function(ngModule) {
   'use strict';
 
-  angular
-    .module('TmApp')
-    .controller('TopicController', TopicController);
+  ngModule.controller('TopicController', TopicController);
 
   function TopicController($state, $stateParams, dataservice) {
     var vm = this;
@@ -16,10 +14,7 @@
         break;
       }
     }
-    vm.go = function(topicId) {
-      $state.go('topic.info', {
-        'topicId': topicId
-      });
-    };
+    vm.go =
+        function(topicId) { $state.go('topic.info', {'topicId': topicId}); };
   }
-})();
+};

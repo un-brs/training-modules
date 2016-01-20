@@ -2,9 +2,13 @@
   <h2>Documents</h2>
   <table class="topic-docs__list">
     <tr ng-repeat="doc in vm.docs">
-      <td>{{doc.date}}</td>
-      <td>{{doc.title}}</td>
-      <td><a href="{{doc.lnkWord}}"><i class="fa fa-file-word-o"></i></a> <a href="{{doc.lnkPdf}}"><i class="fa fa-file-pdf-o"></i></a></td>
+      <td>{{doc.PublicationDate|date: "dd.MM.yyyy"}}</td>
+      <td ng-repeat="title in doc.Titles" ng-if="title.Language == vm.lang">{{title.Value}}</td>
+      <td>
+        <span ng-repeat="file in doc.Files|orderBy:'Extension'" ng-if="file.Language == vm.lang">
+          <a href="{{file.Url}}" alt="{{file.MimeType}}"><i class="fa {{file.MimeType|icon_by_mime}}"></i></a>
+        </span>
+      </td>
     </tr>
   </table>
   <div class="topic-docs__back">

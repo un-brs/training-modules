@@ -1,15 +1,14 @@
-(function() {
-    'use strict';
+module.exports = function(ngModule) {
+  'use strict';
 
-    angular
-        .module('TmApp')
-        .controller('WebinarsController', WebinarsController);
+  ngModule.controller('WebinarsController', WebinarsController);
 
-    WebinarsController.$inject = ['$stateParams', 'dataservice'];
+  WebinarsController.$inject = ['$stateParams', 'confservice'];
 
-    function WebinarsController($stateParams, dataservice) {
-      var vm = this;
-      vm.webinars = dataservice.webinars();
-      vm.courseId = $stateParams.courseId;
-    }
-})();
+  function WebinarsController($stateParams, confservice) {
+    var vm = this;
+    vm.webinars = confservice.webinars(['E-waste'])
+                      .then(function(result) { vm.webinars = result; });
+    vm.courseId = $stateParams.courseId;
+  }
+};

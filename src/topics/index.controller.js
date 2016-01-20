@@ -1,19 +1,14 @@
-(function() {
+module.exports = function(ngModule) {
   'use strict';
 
-  angular
-    .module('TmApp')
-    .controller('IndexController', IndexController);
+  ngModule.controller('IndexController', IndexController);
 
   /* @ngInject */
-  function IndexController($scope, $state, $stateParams, $timeout, dataservice) {
+  function IndexController($scope, $state, $stateParams, $timeout,
+                           dataservice) {
     var vm = this;
-    var options = {
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      dots: true,
-      infinite: false
-    };
+    var options =
+        {slidesToShow: 3, slidesToScroll: 1, dots: true, infinite: false};
 
     var topics = dataservice.topics();
     var pairs = [];
@@ -31,29 +26,24 @@
     }
 
     vm.pairs = pairs;
-    $timeout(
-      function() {
-        $('.slick').slick(options);
+    $timeout(function() {
+      $('.slick').slick(options);
 
-        var hoverItemIn = function() {
-          $(this).addClass("slick__subitem--hover");
-          $(".slick__subitem").not(this).addClass("slick__subitem--nothover");
-        };
+      var hoverItemIn = function() {
+        $(this).addClass("slick__subitem--hover");
+        $(".slick__subitem"). not(this).addClass("slick__subitem--nothover");
+      };
 
-        var hoverItemOut = function() {
-          $(this).removeClass("slick__subitem--hover");
-          $(".slick__subitem").not(this).removeClass("slick__subitem--nothover");
-        };
+      var hoverItemOut = function() {
+        $(this).removeClass("slick__subitem--hover");
+        $(".slick__subitem"). not(this).removeClass("slick__subitem--nothover");
+      };
 
-        $('.slick__subitem').hoverIntent(hoverItemIn, hoverItemOut);
+      $('.slick__subitem').hoverIntent(hoverItemIn, hoverItemOut);
 
-      }
-    );
+    });
 
-    vm.go = function(topicId) {
-      $state.go('topic.info', {
-        'topicId': topicId
-      });
-    };
+    vm.go =
+        function(topicId) { $state.go('topic.info', {'topicId': topicId}); };
   }
-})();
+};

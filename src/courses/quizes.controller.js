@@ -1,14 +1,12 @@
-(function() {
-    'use strict';
+module.exports = function(ngModule) {
+  'use strict';
 
-    angular
-        .module('TmApp')
-        .controller('QuizesController', QuizesController);
+  ngModule.controller('QuizesController', QuizesController);
 
-    QuizesController.$inject = ['$stateParams'];
+  QuizesController.$inject = ['$stateParams'];
 
-    function QuizesController($stateParams) {
-      var vm = this;
-      vm.courseId = $stateParams.courseId;
-    }
-})();
+  function QuizesController($stateParams) {
+    var vm = this;
+    vm.courseId = $stateParams.courseId;
+  }
+};

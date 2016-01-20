@@ -1,14 +1,12 @@
-(function() {
-    'use strict';
+module.exports = function(ngModule) {
+  'use strict';
 
-    angular
-        .module('TmApp')
-        .controller('CasesController', CasesController);
+  ngModule.controller('CasesController', CasesController);
 
-    CasesController.$inject = ['$stateParams'];
+  CasesController.$inject = ['$stateParams'];
 
-    function CasesController($stateParams) {
-      var vm = this;
-      vm.courseId = $stateParams.courseId;
-    }
-})();
+  function CasesController($stateParams) {
+    var vm = this;
+    vm.courseId = $stateParams.courseId;
+  }
+};

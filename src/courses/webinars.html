@@ -2,9 +2,9 @@
   <h2>Webinars</h2>
   <table class="topic-docs__list">
     <tr ng-repeat="webinar in vm.webinars">
-      <td>{{webinar.date}}</td>
+      <td>{{webinar.start|odata_date|date:'dd.MM.yyyy'}}</td>
       <td>{{webinar.title}}</td>
-      <td><a href="{{webinar.lnk}}"><i class="fa fa-external-link"></i></a> </td>
+      <td><a href="{{webinar.url}}"><i class="fa fa-external-link"></i></a> </td>
     </tr>
   </table>
   <div class="topic-docs__back">

@@ -1,6 +1,6 @@
-(function() {
+module.exports = function(ngModule) {
   'use strict';
-  angular.module('TmApp').config(function($stateProvider, $urlRouterProvider) {
+  ngModule.config(function($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise("/");
     $stateProvider.state('index', {
                            url: '/', template: require("./topics/index.html"),
@@ -43,4 +43,4 @@
         });
   });
 
-})();
+};

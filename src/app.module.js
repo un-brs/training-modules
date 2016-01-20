@@ -1,6 +1,5 @@
 (function() {
-    'use strict';
+  'use strict';
 
-    angular
-        .module('TmApp', ['ui.router' , 'restangular']);
+  angular.module('TmApp', ['ui.router', 'restangular', 'angular-loading-bar']);
 })();
