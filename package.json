@@ -1,0 +1,42 @@
+{
+  "name": "e-modules",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "dependencies": {
+    "angular": "^1.4.8",
+    "angular-loading-bar": "^0.8.0",
+    "angular-ui-router": "^0.2.15",
+    "lodash-compat": "^3.10.1",
+    "restangular": "^1.5.1",
+    "webpack": "^1.12.11",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "css-loader": "^0.23.1",
+    "gh-pages": "^0.8.0",
+    "karma": "^0.13.19",
+    "karma-chai": "^0.1.0",
+    "karma-mocha": "^0.2.1",
+    "karma-webpack": "^1.7.0",
+    "mocha": "^2.3.4",
+    "raw-loader": "^0.5.1",
+    "style-loader": "^0.13.0"
+  },
+  "scripts": {
+    "test": "NODE_ENV=test karma start",
+    "build": "NODE_ENV=production node node_modules/.bin/webpack",
+    "start": "node node_modules/.bin/webpack-dev-server --content-base dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/un-brs/training-modules.git"
+  },
+  "author": "Alexander Mazurov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/un-brs/training-modules/issues"
+  },
+  "homepage": "https://github.com/un-brs/training-modules#readme"
+}
